@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>House Price Predictor</h2>
+
+        <form method="POST">
+            <input name="OverallQual" placeholder="Overall Quality" required>
+            <input name="GrLivArea" placeholder="Living Area (sq ft)" required>
+            <input name="TotalBsmtSF" placeholder="Basement Area" required>
+            <input name="GarageCars" placeholder="Garage Cars" required>
+            <input name="YearBuilt" placeholder="Year Built" required>
+            <input name="Neighborhood" placeholder="Neighborhood" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction %}
+            <div class="result">
+                Predicted Price: ₦{{ prediction | round(2) }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

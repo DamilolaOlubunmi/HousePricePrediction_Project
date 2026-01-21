@@ -1,0 +1,6 @@
+Name: Olubunmi Damilola
+Matric Number: 23CG034129
+Machine Learning Algorithm Used: Random Forest Regressor
+Model Persistence Method: Joblib
+Live URL: https://your-deployed-app-link
+GitHub Repository: https://github.com/yourusername/HousePrice_Project
