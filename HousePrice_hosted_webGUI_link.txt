@@ -3,4 +3,4 @@ Matric Number: 23CG034129
 Machine Learning Algorithm Used: Random Forest Regressor
 Model Persistence Method: Joblib
 Live URL: https://your-deployed-app-link
-GitHub Repository: https://github.com/yourusername/HousePrice_Project
+GitHub Repository: https://github.com/DamilolaOlubunmi/HousePricePrediction_Project/
