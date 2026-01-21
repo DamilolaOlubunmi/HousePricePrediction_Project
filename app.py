@@ -4,6 +4,7 @@ import pandas as pd
 
 app = Flask(__name__)
 
+# Load model from model folder
 model = joblib.load("model/house_price_model.pkl")
 
 @app.route("/", methods=["GET", "POST"])
@@ -22,6 +23,8 @@ def index():
 
         df = pd.DataFrame([data])
         df = pd.get_dummies(df)
+
+        # Ensure columns match training data
         df = df.reindex(columns=model.feature_names_in_, fill_value=0)
 
         prediction = model.predict(df)[0]
@@ -29,4 +32,4 @@ def index():
     return render_template("index.html", prediction=prediction)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=False)
